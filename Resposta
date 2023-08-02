@@ -1,0 +1,23 @@
+function solucao(numeros) {
+  const n = numeros.length;
+  let soma = 0;
+
+  for (let i = 0; i < n; i++) {
+    soma += numeros[i];
+  }
+
+  const restoDivisao = soma % n;
+  const posicaoGoleiro = restoDivisao === 0 ? n : restoDivisao;
+  console.log (posicaoGoleiro);
+}
+  
+
+
+function processData(input) {
+	const strings = input.split(" ");
+    const numeros = [];
+	for(let i = 0; i < strings.length; i++) {
+    	  numeros.push(parseInt(strings[i] ,10))
+  	}
+    solucao(numeros)
+} 
